@@ -21,9 +21,6 @@ func NewLog() *Log {
 		cli: os.Stdout,
 	}
 }
-func (l *Log) SetLean(lean *leancloud.LeanCloud) {
-	l.lean = lean
-}
 func (l *Log) Info(msg string, f string) error {
 	return l.write(&info{
 		Level:  "info",
